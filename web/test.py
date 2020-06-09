@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 source = requests.get("https://www.naver.com/").text
 soup = BeautifulSoup(source, "html.parser")
-hotKeys = soup.select("span.ah_k")
+hotKeys = soup.select("span.keyword")
 
 index = 0
 for key in hotKeys:
